@@ -196,7 +196,7 @@ public final class GCMHelper {
      * @param context application's context.
      * @param regId registration ID
      */
-    private static void storeRegistrationId(final Context context, final String regId) {
+    static void storeRegistrationId(final Context context, final String regId) {
         final SharedPreferences prefs = getGcmPrefs(context);
         final int appVersion = getAppVersion(context);
         log(context, Log.VERBOSE, "Saving regId on app version " + appVersion);
@@ -209,7 +209,7 @@ public final class GCMHelper {
     /**
      * Sets whether the device was successfully registered in the server side.
      */
-    private static void setRegisteredOnServer(final Context context, final boolean flag) {
+    static void setRegisteredOnServer(final Context context, final boolean flag) {
         final SharedPreferences prefs = getGcmPrefs(context);
         final Editor editor = prefs.edit();
         editor.putBoolean(PROPERTY_ON_SERVER, flag);
