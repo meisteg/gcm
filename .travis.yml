@@ -14,3 +14,9 @@ android:
 
 script:
   - ./gradlew build
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.gradle
